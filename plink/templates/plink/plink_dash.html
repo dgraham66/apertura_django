@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>PLINK Dashboard</h1>
+        <p></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-tasks fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><h3>12</h3></div>
+                            <div><h2>PLINK Prefabs</h2></div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="panel-footer">
+                        <a href="{% url 'prefabs' %}">
+                            <span class="pull-left">View Prefabs</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <br>
+                        <a href="{% url 'plink_create' %}">
+                        <span class="pull-left">Create Prefab</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-wrench fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><h3>6</h3></div>
+                            <div><h2>Configured Jobs</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <a href="{% url 'plinkjob_list' %}">
+                            <span class="pull-left">View Jobs</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <br>
+                        <a href="{% url 'plinkjob_create' %}">
+                            <span class="pull-left">Create Job</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-gears fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><h3>2</h3></div>
+                            <div><h2>Utilities</h2></div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="panel-footer">
+                        <a href="{% url 'load_prefabs' %}">
+                            <span class="pull-left">Load Initial Prefabs</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+</div> <!-- /container -->
+
+{% endblock %}
+

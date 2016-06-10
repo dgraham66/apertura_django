@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  transpose:
+  recode:
+  noweb:
+  out: DIR_trans

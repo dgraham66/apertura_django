@@ -1,0 +1,5 @@
+plink_options:
+  bfile: DIR
+  indep: [param1, param2, param3]
+  noweb:
+  out: DIR_ld

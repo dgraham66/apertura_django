@@ -1,0 +1,8 @@
+--bfile data/raw_input/hapmap3_CEU_b36 
+--maf 0.1 
+--mind 0.1 
+--geno 0.1 
+--hwe 1e-6 
+--make-bed  
+--noweb  
+--out data/tmp/hapmap3_CEU_b36_QA 

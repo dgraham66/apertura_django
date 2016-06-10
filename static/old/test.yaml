@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  gxe: true
+  indep: '[''param1'', ''param2'', ''param3'']'
+  noweb: true
+  out: DIR_ld

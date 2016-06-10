@@ -1,0 +1,28 @@
+pk_name: demo_basic_qa
+pretty_name: Basic QA Demo
+description: A basic data quality check PLINK job for demo purposes.
+plink_options:
+  - opt_key: bfile
+    opt_value: data/raw_input/hapmap3_CEU_b36
+    opt_type: OPT_FILE
+  - opt_key: maf
+    opt_value: 0.1
+    opt_type: OPT_FLOAT
+  - opt_key: mind
+    opt_value: 0.1
+    opt_type: OPT_FLOAT
+  - opt_key: geno
+    opt_value: 0.1
+    opt_type: OPT_FLOAT
+  - opt_key: hwe
+    opt_value: 1e-6
+    opt_type: OPT_TEXT
+  - opt_key: make-bed
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: noweb
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: out
+    opt_value: data/tmp/hapmap3_CEU_b36_QA
+    opt_type: OPT_FILE

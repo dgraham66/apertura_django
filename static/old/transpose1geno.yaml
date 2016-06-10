@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  recodeA:
+  noweb:
+  out: DIR_1genovalue
+  

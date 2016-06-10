@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="jumbotron">
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="page-header">
+				<h1>
+					Apertura <br><small>Genetic Data Processing Pipeline</small>
+				</h1>
+			</div>
+			<p>
+<strong>Definition (Latin):</strong> <i>apertūra</i> f (genitive <i>apertūrae</i>); an opening (action)
+Apertura is a genetic data processing framework designed to assist with the creation complex pipelines of batch jobs. It handles the combination, and analysis of genetic datasets. For initial release this framework primarily wraps the <a href="http://pngu.mgh.harvard.edu/~purcell/plink/">PLINK</a> genome analysis toolset.
+			</p>
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-3">
+			<img alt="Bootstrap Image Preview" src="{% static 'images/mrn_logo.png' %}" />
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}

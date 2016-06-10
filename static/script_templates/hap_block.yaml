@@ -1,0 +1,16 @@
+pk_name: hap_block
+pretty_name: HAP Block
+description: A basic HAP block PLINK job for demo purposes.
+plink_options:
+  - opt_key: bfile
+    opt_value: data/raw_input/hapmap3_CEU_b36
+    opt_type: OPT_FILE
+  - opt_key: blocks
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: noweb
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: out
+    opt_value: data/tmp/hapmap3_CEU_b36_QA
+    opt_type: OPT_FILE

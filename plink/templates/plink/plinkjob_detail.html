@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>
+                    PLINK <small>Job Detail</small>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Job Name</span>
+                                <input type="text" class="form-control" aria-label="Name" value="{{ job.name }}" >
+                                <span class="input-group-addon">Job Status</span>
+                                <input type="text" class="form-control" aria-label="Name" value="{{ job.status }}" >
+                            </div>
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon">Path</span>-->
+                                <!--<input type="text" class="form-control" aria-label="Path" value="{{ plink.prefab_path }}" >-->
+                            <!--</div>-->
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                            <h3 class="panel-title">Job Results</h3>
+                                          </div>
+                                          <div class="panel-body">
+                                            <div class="well" style="word-wrap: break-word;">
+                                                {% if job.result_text %}
+                                                    {{ job.result_text }}
+                                                {% else %}
+                                                    No results yet.
+                                                {% endif %}
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                    <!--<div class="input-group input-group-lg">-->
+                                        <!--<input-->
+                                                <!--type="text"-->
+                                                <!--class="form-control"-->
+                                                <!--placeholder="Description"-->
+                                                <!--aria-label="Description"-->
+                                                <!--value="{{ plink.description }}"-->
+                                        <!--&gt;-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <!--<a href="" class="btn btn-success btn-default btn-block" type="button">Save Changes</a> -->
+                            <a href="{% url 'plinkjob_run' job.pk %}" class="btn btn-success btn-default btn-block" type="button">Run Job</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Job Runner</h1>
+<ul>
+    <li>{{ job.pk }}</li>
+    <li>{{ job.name }}</li>
+    <li>{{ job.plink_id }}</li>
+    <li>{{ job.status }}</li>
+    <li>{{ job.result_text }}</li>
+</ul>
+{% endblock %}

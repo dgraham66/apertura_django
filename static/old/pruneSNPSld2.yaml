@@ -1,0 +1,5 @@
+plink_options:
+  bfile: DIR
+  extract: DIR_ld.prune.in
+  make-bed:
+  out: DIR_ld_param3

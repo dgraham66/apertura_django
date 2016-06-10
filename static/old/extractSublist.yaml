@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  extract: sublist.txt
+  make-bed:
+  noweb:
+  out: DIR_sublist

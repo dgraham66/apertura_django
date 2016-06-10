@@ -1,0 +1,5 @@
+plink_options:
+  bfile: DIR
+  check-sex:
+  noweb:
+  out: DIR_sexcheck

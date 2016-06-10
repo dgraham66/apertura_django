@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  extract: snplist.txt
+  make-bed:
+  noweb:
+  out: DIR_snplist

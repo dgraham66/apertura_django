@@ -1,0 +1,6 @@
+plink_options:
+  bfile: DIR
+  blocks:
+  ld-snp: SNP_NAME
+  noweb:
+  out: DIR_ld_snpname

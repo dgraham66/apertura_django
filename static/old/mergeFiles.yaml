@@ -1,0 +1,8 @@
+plink_options:
+  bfile: DIR
+  bmerge: mergelist.txt
+  merge-mode: OPTION
+  make-bed:
+  noweb:
+  out: DIR1 + DIR2 + filen
+  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Apertura{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    {% block header %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                Home
+            </a>
+            <a class="navbar-brand" href="{% url 'about' %}">
+                About
+            </a>
+            <a class="navbar-brand" href="{% url 'plink' %}">
+                PLINK
+            </a>
+            <a class="navbar-brand" href="{% url 'docs' %}">
+                Documentation
+            </a>
+        </div>
+        {% if request.user.is_authenticated %}
+        <p class="navbar-text navbar-right">
+        Logged in as {{ request.user }}
+        /
+        <a href="{% url 'logout' %}">Logout</a>
+        </p>
+        {% endif %}
+    </div>
+</nav>
+
+{% for message in messages %}
+    {% if message.level_tag == "info" %}
+        <div class="alert alert-info" role="alert">{{ message }}</div>
+    {% elif message.level_tag == "success" %}
+        <div class="alert alert-success" role="alert">{{ message }}</div>
+    {% elif message.level_tag == "warning" %}
+        <div class="alert alert-warning" role="alert">{{ message }}</div>
+    {% elif message.level_tag == "error" %}
+        <div class="alert alert-danger" role="alert">{{ message }}</div>
+    {% endif %}
+{% endfor %}
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

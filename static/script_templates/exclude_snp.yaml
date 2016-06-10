@@ -1,0 +1,19 @@
+pk_name: exclude_snp
+pretty_name: Exclude SNP
+description: A basic SNP exclusion PLINK job for demo purposes.
+plink_options:
+  - opt_key: bfile
+    opt_value: data/raw_input/hapmap3_CEU_b36
+    opt_type: OPT_FILE
+  - opt_key: exclude
+    opt_value: snplist.txt
+    opt_type: OPT_TEXT
+  - opt_key: make-bed
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: noweb
+    opt_value: TRUE
+    opt_type: OPT_BOOL
+  - opt_key: out
+    opt_value: data/tmp/hapmap3_CEU_b36_QA
+    opt_type: OPT_FILE

@@ -1,0 +1,7 @@
+plink_options:
+  bfile: DIR
+  gxe:
+  covar: covariatefile.txt
+  pheno: phenofile.txt
+  noweb:
+  out: DIR_covariatefile_phenofile

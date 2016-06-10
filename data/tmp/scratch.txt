@@ -1,0 +1,1 @@
+plink1.9 —-bfile hapmap3_CEU_b36.bed --maf mafnumberhere --mind missingnesshere --geno genoratehere --hwe 1e-6 --make-bed --noweb --out filenamehere_QA

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="list-group">
+        {% for plinkjob in object_list %}
+            <a href="{% url 'plinkjob_detail' plinkjob.pk %}" class="list-group-item"><b>{{ plinkjob.name }}:</b> {{ plinkjob.name }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,5 @@
+plink_options:
+  bfile: DIR
+  blocks:
+  noweb:
+  out: DIR_hapblock

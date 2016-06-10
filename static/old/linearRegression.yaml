@@ -1,0 +1,7 @@
+plink_options:
+  bfile: DIR
+  linear:
+  covar: covariate.txt
+  pheno: phenofile.txt
+  noweb:
+  out: DIR_covariatefile_phenotype_linreg
