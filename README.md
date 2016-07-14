@@ -1,77 +1,27 @@
-# Django Skeleton
+# apertura
 
-for Django 1.9
+***Definition (Latin):*** apertūra f (genitive apertūrae); an opening (action)
 
-## Features
-Adds the following on top of Django's startproject template
-
-* A set of starter html templates using bootstrap and jquery.
-
-  * `base.html` is a minimal bootstrap template. It also shows any pending Django
-    messages from the messages framework, and shows the currently logged-in
-    user, and a link to logout.
-  * `login.html` has a minimal login form
-  * `logout.html` has a logout message and a link to log in again
-  * `password_change.html` has a minimal password change form
-  * `password_change_done.html` has a success message and a link to the
-    'home' view
-
-* A settings file split into a `common_settings.py` and `settings.ex.py`.
-* Settings configured for a top-level static files directory
-* Settings configured for a top-level templates directory
-* Settings configured with a good default logging configuration
-* Settings configured to auto-generate a secret key on first invocation
-* A starter `.gitignore`
-* A starter `requirements.txt`
-* Defined urls for django built-in authentication views (login,
-  logout, and password change) and settings configured to use them
-  (`LOGIN_URL`, `LOGOUT_URL`, and `LOGIN_REDIRECT_URL`).
+Apertura is a data pre-processing framework designed to assist with the creation, combination, and analysis of genetic datasets.
 
 ## Getting Started
-The bare minimum to get a working project is:
+### Python Dependencies
+Use Pip to install necessary python modules where possible. 
 
-1. Create a virtualenv and install the requirements listed in `requirements.txt`
-2. Change the project name in the following places:
+[luigi](https://pypi.python.org/pypi/luigi)
+[django](https://www.djangoproject.com/)
+[django-dashing](http://django-dashing.readthedocs.org/en/v0.3/)
 
-   * The project directory name
-   * `common_settings.py` ROOT_URLCONF
-   * `common_settings.py` WSGI_APPLICATION
-   * `wsgi.py` the default settings module path
-   * `manage.py` the default settings module path
+## Useful Links
+Here are a few useful links for this project.
 
-3. Change the app name in the following places:
+### Python Development
+[***PyCharm IDE***](https://www.jetbrains.com/pycharm/download/)
+This is a good IDE for python development. The community edition is full featured and has an unlimited trial.
 
-   * The app directory name
-   * `common_settings.py` INSTALLED_APPS
-   * The import statement in the project-wide `urls.py`
+[***Anaconda Python Distribution***](https://www.continuum.io/downloads).
+A good general purpose python distribution with virtual environment support and a good selection of scientific libraries. We are using ***Python 2.7***
 
-3. Copy the `settings.ex.py` to `settings.py`. No changes are needed for
-   development. It is recommended to not check this file in to version
-   control. As per our convention, settings common to all deployments go in
-   `common_settings.py` which is checked in to version control.
-   Deployment-specific settings go in `settings.py` which is not checked in
-   to version control, or is checked in only on a deployment-specific branch.
-
-4. The app should run now. You probably want to do the following at some
-   point, though:
-
-   * Change the project title and navbar header in base.html
-
-## About base.html
-
-The base template is a simple bootstrap-based html template. It has 4 content
-blocks to override in sub-templates:
-
-* `header` is used to insert items into the header of the page, such as
-  stylesheets.
-* `content` is where all your content should go. It is placed inside a
-  `<div>` with class `container`
-* `scripts` is a block at the very end of the body, which can be used to
-  insert javascript blocks.
-* `title` overrides the document title.
-
-## Notes
-
-* A view named 'home' is referenced in the starter templates and in the
-  `LOGIN_REDIRECT_URL` setting. If you change the home view to be named
-  something else, make sure you update these references.
+### Version Control
+[***Project Github Repository***](https://github.com/dgraham66/apertura.git)
+Code is stored at this private Github repository. If you do not have access email <dgraham24@unm.edu> with your github username and request it.
